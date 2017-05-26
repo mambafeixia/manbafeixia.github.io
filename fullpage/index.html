@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css"/>
+	<style type="text/css">
+	.one{background-image: url(img/img11/10.jpg);text-align: center;color: #fff;}
+	.one p{display:inline-block;width:425px;height:80px;text-align: left;}
+	.two{width:1000px;height:662px;background: #eee;margin: 0 auto;text-align: center;position: relative;overflow: hidden;}
+	.two-zi{width:430px;height:80px;position: absolute;left:280px;top:0;font-size:16px;transition: all 1500ms ease-in;}
+	.two-tu{position: absolute;left:70px;top:640px;width:800px;height:580px;list-style: none;transition: all 1000ms ease-in;}
+	.two-tu.active{transform:translate3d(0,-460px,0);}
+	.two-zi.active{transform:translate3d(0,80px,0);}
+	.two-tu img{width:400px;height:500px;}
+	.two-tu li{float: left;}
+	.three{background-image: url(img/img11/12.jpg);position: relative;}
+	.three-zi{position: absolute;left:130px;bottom: 150px;width:430px;height:80px;}
+	.four{margin-left:180px;position: relative;}
+	.four li{list-style: none;}
+	.four p{display: inline-block;width:500px;height:100px;}
+	.four h2{display: inline-block;}
+	 span{display: inline;margin-left: 150px;}
+	 hr{width:300px;margin-left: 0;}
+	 .four-zi{margin-left:220px;}
+	 .four-tu{position: absolute;bottom:0;right:0;width:800px;height:650px;}
+	 .five{position: relative;overflow: hidden;}
+	 .five-zi{width:500px;height: 100px;position: absolute;top: 30px;left:420px;line-height:30px;}
+	 .five-tu{width:700px;height:500px;position: absolute;bottom:200px;left:-300px;transition: all 500ms ease-in;}
+	 .five-tu.active{transform: translate3d(600px,200px,0);}
+	 .five-tu img{width:100%;height:100%;}
+	 .six{position: relative;overflow: hidden;}
+	 .six-zi{width:400px;height: 100px;position: absolute;right:-120px;bottom:300px;transition: all 1500ms ease-in;}
+	 .tu-1{width:1000px;height:600px;position: absolute;bottom:200px;left:-120px;transition: all 500ms ease-in;}
+	 .tu-2{width:380px;height:180px;position: absolute;bottom:0;left:260px;transition: all 1000ms ease-in;}
+	 .six-zi.active{transform:translate3d(-200px,0,0);}
+	 .tu-1.active{transform:translate3d(0,200px,0);}
+	 .tu-2.active{transform:translate3d(0,-100px,0);}
+	 .seven{background-image: url(img/img11/13.jpg);position: relative;}
+	 .seven-zi{width:500px;height:80px;position: absolute;left:530px;bottom:200px;}
+	 .eight{background:#00B4EC;position: relative;overflow: hidden;}
+	 .eight-tu{width:650px;height: 600px;position: absolute;bottom:-200px;transition: all 500ms ease-in;}
+	 .eight-tu.active{transform:translate3d(0,-200px,0);}
+	 .eight-tu img{width: 100%;height: 100%;}
+	 .eight-zi{width: 400px;height: 80px;position: absolute;right:200px;bottom:200px;}
+	 .nine{position: relative;overflow: hidden;}
+	 .nine-zi h1{position: absolute;top: 100px;left:300px;}
+	 .nine-zi p{position: absolute;top:180px;left:140px;}
+	 .nine-1{position: absolute;bottom:0;left:300px;width:300px;height:500px;transition: all 500ms ease-in;z-index: 1;}
+	 .nine-2{width:300px;height:500px;position: absolute;bottom:0;left:700px;z-index: 2;transition: all 500ms ease-in;}
+	 .nine-3{width:300px;height:500px;position: absolute;bottom:50px;left:500px;z-index: 3;transition: all 1000ms ease-in;}
+	 #menu{position:fixed;left:-30px;top:120px;z-index: 99;}
+	 #menu li{width:60px;height:40px;background:#fff;list-style: none;margin-top: 5px;text-align: center;line-height: 40px;}
+	 #menu li.active{background: #f00;}
+	 a{text-decoration: none;}
+	 .header{position:fixed;top:0;width: 100%;height:70px;background: rgba(255,255,255,.8);display: none;}
+	 .ding-tu{float: left;margin: 20px 0 0 100px;}
+	 .ding{float:right}
+	 .ding li{float: left;list-style: none;margin-right:30px;margin-top: 10px;}
+	 .abc{display:block;}
+	 .nine-1.active{transform:translate3d(0,200px,0);}
+	 .nine-3.active{transform:translate3d(0,200px,0);}
+	 .nine-2.active{transform:translate3d(0,200px,0);}
+	</style>
+	</head>
+	<body>
+		<header class="header">
+			<img src="img/img11/15.png" class="ding-tu"/>
+			<ul class="ding">
+				<li>看一看</li>
+				<li>问一问</li>
+				<li>逛一逛</li>
+				<li>帮一帮</li>
+							
+			</ul>
+		</header>
+	<ul id="menu">
+	<li data-menuanchor="1" class="active"><a href="#1">one</a></li>
+	<li data-menuanchor="2"><a href="#2">two</a></li>
+	<li data-menuanchor="3"><a href="#3">three</a></li>
+	<li data-menuanchor="4"><a href="#4">four</a></li>
+	<li data-menuanchor="5"><a href="#5">five</a></li>
+	<li data-menuanchor="6"><a href="#6">six</a></li>
+	<li data-menuanchor="7"><a href="#7">seven</a></li>
+	<li data-menuanchor="8"><a href="#8">eight</a></li>
+	<li data-menuanchor="9"><a href="#9">nine</a></li>
+	</ul>
+
+		<div id="qaz">
+		<div class="section one">
+			<h1>青年良品</h1>
+				<p>追求极致，轻易不说完美&mdash;&mdash;半年时间内，我们便更新了魅蓝 note2。它从各个方面都更进一步；无论是 R 角弧线、还是更佳的相机算法、甚或是全新的 mBack 键……如此多的改进，只为给你一台更加完美的「青年良品」。</p>
+		</div>
+		<div class="section">
+			<div class="two">
+				<div class="two-zi">
+				<h1>多彩纤薄机身</h1>
+				<p>魅蓝 note2 延续了多彩配色风格，并首次引入魅族 MX 系列的金属灰配色，深邃，且富有质感。魅蓝 note2 适于年轻个性，也完美契合轻熟商务。仅 149g 的重量，薄至 8.7mm 的厚度，更性感的 R 角弧度让单手握持毫无繁重。</p>
+				</div>
+				<ul class="two-tu">
+					<li><img src="img/img11/20.png"/></li>
+					<li><img src="img/img11/21.png"/></li>
+				</ul>
+			</div>
+		</div>
+		<div class="section three">
+				<div class="three-zi">
+				<h1>一体化成型 CNC 精雕</h1>
+				<p>更为成熟的一体化成型工艺被运用于魅蓝 note2 上。外部聚碳酸酯材质后盖包裹着内里的镁合金骨架，温润手感与坚实结构均完美继承。mBack 键首次出现在魅蓝系列，经 CNC 精加工后的铝合金按键加固环，视觉冲击与金属质感更强烈。</p>
+				</div>
+		</div>
+		<div class="section">
+			<div class="four">
+				<h1>5.5 英寸 1080P 全贴合屏幕</h1>
+				<p>5.5 英寸 1080P Full HD 屏幕，IGZO 显示技术可让每台手机都有高度统一的出色表现，也具备绝佳的低功耗特性。403PPI 带来细腻的视觉体验，对比度高达 1000：1。屏幕亮度则为 450cd/m²，户外强光下依旧清晰可见。GFF 全贴合，避免反光影响，屏显透彻。</p>
+				<ul class="parameters-list">
+					<hr>
+					<li><h2>403</h2><span class="four-zi">PPI</span></li>
+					<hr>
+					<li><h2>1000 : 1</h2><span>对比度</span></li>
+					<hr>
+					<li><h2>450cd/m²</h2><span>亮度</span></li>
+					<hr>
+				</ul>
+			</div>
+			<img src="img/img11/30.png" class="four-tu"/>
+		</div>
+		<div class="section five">
+			<div class="five-zi">
+				<h1>64 位八核 CPU 三核心图形处理器</h1>
+				<p>新一代 64 位 MT6753 处理器，八颗 A53 架构核心可根据具体使用场景进行智能调配。灵活兼顾高性能大型游戏与日常轻度使用，无需习惯「斤斤计较」的电量规划。图形处理器为三核心 64 位 Mali T720，视频播放画面顺滑流畅。</p>
+			</div>
+			<div class="five-tu">
+				<img src="img/img11/25.png"/>
+			</div>
+		</div>
+		<div class="section six">
+			<div class="six-zi">
+				<h1>五模十三频 双 4G 双卡双待</h1>
+				<p>不再受限硬件，支持 TD-LTE 与 FDD-LTE 双 4G 制式，无缝切换中国移动中国联通。单卡槽双 Nano-SIM 卡位简洁机身设计，主卡位还可复用兼容最大 128GB 内存卡扩展。<br>*公开版可支持中国移动中国联通双 4G</p>
+			</div>
+			<img src="img/img11/14.jpg" class="tu-1"/>
+			<img src="img/img11/11.png" class="tu-2"/>
+		</div>
+		<div class="section seven">
+			<div class="seven-zi">
+				<h1>1300 万像素主摄像头<br>双色温双闪光灯</h1>
+				<p>魅蓝 note2 主摄像头沿用专业的三星 1300 万像素 CMOS，成像锐利细节丰富。双色温双闪光灯，暗光环境下白平衡精准自然。零延时快门拍照，生活每一瞬息皆为永恒。前置 500 万像素配合升级过的 FotoNation 智能美颜算法，按下快门的瞬间，系统即可完成美肤调亮，静待分享社交圈。</p>
+			</div>
+
+		</div>
+		<div class="section eight">
+			<div class="eight-zi">
+				<h1>3100mAh 典型容量<br>SONY 等电芯</h1>
+				<p>电池典型值容量为 3100mAh，在同等价位实属少见。采购高成本的 SONY/ATL 等电芯，只因安全耐用。</p>
+			</div>
+		
+		<div class="eight-tu">
+			<img src="img/img11/10.png"/>
+		</div>
+
+		</div>
+		<div class="section nine">
+			<div class="nine-zi">
+				<h1>基于 Android 5.1 内核的全新 Flyme 4.5 系列</h1>
+				<p>Android 5.1 的优秀特性需结合 64 位处理器才能最大化释放。在全新的 Flyme 4.5 系统上，可切实感受到最先进的 Android 内存管控机制与电池续航控制。</p>
+			</div>
+				<img src="img/img11/16.png" class="nine-1"/>
+				<img src="img/img11/19.png" class="nine-2"/>
+				<img src="img/img11/18.png" class="nine-3"/>
+		</div>
+		</div>
+		
+
+	<script src="js/jquery.js"></script>	
+	<script src="js/jquery.fullPage.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#qaz").fullpage({
+				navigation:true,
+				navigationPosition:"right",
+				navigationTooltips:["1","2","3","4","5","6","7","8","9"],
+				anchors:["1","2","3","4","5","6","7","8","9"],
+				menu:"#menu",
+				fixedElements:".header",
+				easingcss3:"cubic-bezier(.58,-0.4,.6,1.55)",
+				continuousHorzontal:true,
+				continuousVertical:true,
+				afterLoad:function(anchorLink,index){
+					if(index==1){
+						$('header').addClass('abc')
+						
+					}else if(index==9){
+						$('.nine-1').addClass('active')
+						$('.nine-3').addClass('active')
+						$('.nine-2').addClass('active')
+					}else if(index==8){
+						$('.eight-tu').addClass('active')
+					}else if(index==6){
+						$('.six-zi').addClass('active')
+						$('.tu-1').addClass('active')
+						$('.tu-2').addClass('active')
+					}else if(index==5){
+						$('.five-tu').addClass('active')
+					}else if(index==2){
+						$('.two-tu').addClass('active')
+						$('.two-zi').addClass('active')
+					}
+				},
+				onLeave:function(index,nextIndex,direction){
+					if(index==1&&direction=='down'){
+						$('.header').removeClass('abc')
+					}else if(index==1&&direction=='up'){
+						$('.header').removeClass('abc')
+					}else if(index==9&&direction=='down'){
+						$('.nine-1').removeClass('active')
+						$('.nine-3').removeClass('active')
+						$('.nine-2').removeClass('active')
+					}else if(index==9&&direction=='up'){
+						$('.nine-1').removeClass('active')
+						$('.nine-3').removeClass('active')
+						$('.nine-2').removeClass('active')
+					}else if(index==8&&direction=='up'){
+						$('.eight-tu').removeClass('active')
+					}else if(index==8&&direction=='down'){
+						$('.eight-tu').removeClass('active')
+						
+					}else if(index==6&&direction=='down'){
+						$('.six-zi').removeClass('active')
+						$('.tu-1').removeClass('active')
+						$('.tu-2').removeClass('active')
+						
+					}else if(index==6&&direction=='up'){
+						$('.six-zi').removeClass('active')
+						$('.tu-1').removeClass('active')
+						$('.tu-2').removeClass('active')
+						
+					}else if(index==5&&direction=='down'){
+						$('.five-tu').removeClass('active')
+						
+					}else if(index==5&&direction=='up'){
+						$('.five-tu').removeClass('active')
+						
+					}else if(index==2&&direction=='up'){
+						$('.two-tu').removeClass('active')
+						$('.two-zi').removeClass('active')
+						
+					}else if(index==2&&direction=='down'){
+						$('.two-tu').removeClass('active')
+						$('.two-zi').removeClass('active')
+						
+					}
+				},
+				
+					
+				
+			})
+		})
+	</script>	
+	</body>
+</html>
